@@ -80,3 +80,16 @@ article {
 .cool-guy2 {
   font-size: 100px;
 }
+
+.center-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-box button {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 20px;
+}

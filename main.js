@@ -1,3 +1,5 @@
+
+
 $(document).ready( () => {
 
     $("body").addClass("animate__animated animate__fadeInDown");
@@ -40,6 +42,5 @@ $(document).ready( () => {
         $("#read-3").remove();
         $("#article-text-3").append("Sapiente voluptatum adipisci saepe impedit deleniti dolorum ex eaque consequuntur, suscipit quos. Necessitatibus similique vitae omnis consectetur qui error, nulla explicabo, totam nemo molestias delectus magni. Dolorem, at distinctio atque optio hic quas ratione cum velit, eligendi, corrupti inventore quidem eius error.")
     })
-
    
 })
