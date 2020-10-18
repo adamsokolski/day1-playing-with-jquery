@@ -1,0 +1,82 @@
+* {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode a {
+  color: white;
+}
+
+.white-mode {
+  background-color: white;
+  color: black;
+}
+
+.white-mode article {
+  background-color: rgb(199, 199, 199);
+}
+
+.white-mode #panel {
+  background-color: rgb(185, 185, 185);
+}
+
+.white-mode #flip {
+  background-color: rgb(185, 185, 185);
+}
+
+a {
+  font-size: 20px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header i {
+  padding: 20px;
+}
+
+main {
+  width: 900px;
+}
+
+article {
+  background-color: rgb(66, 66, 66);
+  padding: 20px;
+  margin: 10px;
+}
+
+/* 1 */
+
+#flip,
+#panel {
+  padding: 5px;
+  text-align: center;
+  background-color: rgb(107, 106, 106);
+}
+
+#panel {
+  font-size: 30px;
+  padding: 30px;
+  display: none;
+}
+
+.cool-guy2 {
+  font-size: 100px;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a1d0b5401b.js" crossorigin="anonymous"></script>
+    <title>Playing with jQuery</title>
+</head>
+<body class="dark-mode">
+   
+    <header> <h1>Playing with jQuery</h1>
+        <a href="#">
+            <i class="far fa-moon" id="theme-mode"></i></a></header>
+            <main>
+                <article>
+                    <h2>1.</h2>
+                    <div id="flip">Click to slide the panel</div>
+                    <div id="panel">
+                        <p class="cool-guy">😎 click?</p>
+                        </div>
+                </article>
+                <article>
+                    <h2>2.</h2>
+                    <button id="shutdown">Shutdown😲</button>
+                </article>
+                <article id="article-3">
+                    <h2>3.</h2>
+                    <p id="article-text-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt doloribus ipsam iusto consequatur est, sed facilis, saepe neque repellendus commodi natus quo nobis mollitia maiores amet excepturi quod, delectus a? </p> <a href="#" id="read-3">Read more</a>
+                </article>
+            </main>
+
+            
+
+    <script>
+        $(document).ready( () => {
+
+            $("body").addClass("animate__animated animate__fadeInDown");
+
+
+            // Selecting color theme
+            let themeMode = 0;
+            $("#theme-mode").click(() => {
+                themeMode++;
+                if (themeMode % 2 == 0) {
+                $("body").addClass("dark-mode").removeClass("white-mode");
+                } else {
+                $("body").addClass("white-mode").removeClass("dark-mode");
+                }
+            })
+
+             // When cool guy is clicked
+             $(".cool-guy").click(() => {
+                $("body").removeClass("animate__animated animate__fadeInDown");
+                $("body").html("<p class='cool-guy2'>😎</p><p>nice</p>").addClass("animate__animated animate__bounceInRight");
+            })
+          
+            // 1
+            $("#flip").click(function() {
+                $("#panel").slideToggle("slow");
+            });
+
+            // 2
+            $("#shutdown").click( () => {
+                $("main").addClass("animate__animated animate__flash")
+                setTimeout(() => {
+                    $("body").addClass("animate__animated animate__hinge")
+                }, 1000);
+
+                
+            })
+
+            // 3
+            $("#read-3").click( () => {
+                $("#read-3").remove();
+                $("#article-text-3").append("Sapiente voluptatum adipisci saepe impedit deleniti dolorum ex eaque consequuntur, suscipit quos. Necessitatibus similique vitae omnis consectetur qui error, nulla explicabo, totam nemo molestias delectus magni. Dolorem, at distinctio atque optio hic quas ratione cum velit, eligendi, corrupti inventore quidem eius error.")
+            })
+           
+            
+             
+            
+          
+            
+
+
+           
+        })
+    </script>
+    
+</body>
+</html>
